@@ -1,0 +1,56 @@
+=====================================
+< Microsoft Azure Content Moderator >
+=====================================
+provides machine-assisted content moderation for images, text, and video -- module covers the key concepts involved in using Content Moderator 
+to do text moderation.
+
+<Text_Moderation_API> : 
+It includes the following Features:
+
+>>> Profanity : When Text passed to API , any potential profane term is identified and returned in json response as Term , 
+along with an index value showing where the term is -- The ListId identifies a specific term found in a custom term list --
+sample JSON response is shown here:
+
+"Terms": [
+{
+    "Index": 118,
+    "OriginalIndex": 118,
+    "ListId": 0,
+    "Term": "crap"
+} 
+
+>>> Classification : This feature of API can place text into specific categories based on the following specifications:
+1. Potential presence of language that might be adult in certain situation.
+2. Potential presence of language that might be mature.
+3. Potential presence of language that might be offensive in certain situation.
+
+JSON response returend contains Boolean value as if review recommended and if True then should review the content manually to determine the potential 
+for any issues --  also returns score b/w 0 to 1 for each 3 categories and higher the score ,more likely the category will apply.
+
+>>> Personally identifiable information(PII) : PII is of critical importance in many application -- this feature of API helps to detect if any value 
+in text is considered to be PII like : emailid , IP address , SSN , US phone no. etc. -- JSON response include the relevant information about the PII
+if found in text.
+
+====================================================================================================
+< Adding conversational intelligence using Azure Language Understanding Intelligent Service (LUIS)>
+====================================================================================================
+A  key factor in AI applications is the ability to interact intelligently with the user. -- can build conversational intelligence into your bot by using LUIS 
+-- LUIS is an Azure Cognitive Services API that applies custom machine-learning intelligence .
+
+<Language_Understanding_Intelligent_Service[LUIS]> :
+Helps AI in understanding language as specific aspects(details) are critical to aiding(helping) the algorithm in making comparisons and distinctions --
+maps the user's words, phrases, or sentences to tasks/actions the user wants to do.
+It makes use of three key aspects for understanding language:
+>>> Utterances : input from the user that the app needs to interpret.
+>>> Intents	: represents a task or action -- goal/purpose expressed in a user's utterance.
+>>> Entities : represents a word or phrase inside the utterance .
+Ex :: "Book 2 tickets on a flight to New York for New Year's Eve." , In this utterance the entities New York is a Location , New Year Eve is classified 
+as Event , number 2 is an prebuild entity/number.
+
+===================================================
+< Speech service & speech-enabled applications >
+===================================================
+Speech service provides APIs that you can use to build speech-enabled applications -- Specifically, the Speech service supports:
+
+
+
