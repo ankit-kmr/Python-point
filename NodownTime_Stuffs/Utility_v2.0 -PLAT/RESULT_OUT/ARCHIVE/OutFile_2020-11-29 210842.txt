@@ -1,0 +1,6 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DB Name :: Ankit_Temp_CIDate of execution :: 2020-11-29 21:08:42Schema import started for number of days :: -1Schema Import Started for number of object :: 1Got exception while execution :: 0
+Exception object list :
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DB Name :: Ankit_Temp_CAuthDate of execution :: 2020-11-29 21:08:43Schema import started for number of days :: -1Schema Import Started for number of object :: 1023Got exception while execution :: 5
+Exception object list :>> SP_ADCMappingBase>> PR_getAuthDecisionCtrlData>> AddNewTrancode>> PR_IssuerGeneratedTextMsg>> PR_OnlineFileMaintenanceMsg
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DB Name :: Ankit_Temp_CLDate of execution :: 2020-11-29 21:09:14Schema import started for number of days :: -1

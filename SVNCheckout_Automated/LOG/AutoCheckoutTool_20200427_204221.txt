@@ -1,0 +1,58 @@
+2020-04-27 20:42:21,621 INFO ==================================================================================================================
+2020-04-27 20:42:21,621 INFO AUTHOR : Ankit K
+2020-04-27 20:42:21,622 INFO DESCRIPTION : Automated SVN Checkout
+2020-04-27 20:42:21,622 INFO ==================================================================================================================
+2020-04-27 20:42:21,713 INFO ------ Branch Checkout Started >> CreditProcessing_15.00.16
+2020-04-27 20:42:21,714 INFO 
+..Branch already Exists[CreditProcessing_15.00.16]..
+2020-04-27 20:42:21,714 INFO ..Cleanup started..
+2020-04-27 20:42:21,774 INFO ** Updating Core **
+2020-04-27 20:42:21,813 INFO ** Updating Reporting **
+2020-04-27 20:42:21,852 INFO ------ Branch Checkout Started >> Plat_15.00.17
+2020-04-27 20:42:21,852 INFO 
+..Branch already Exists[Plat_15.00.17]..
+2020-04-27 20:42:21,852 INFO ..Cleanup started..
+2020-04-27 20:42:21,910 INFO ** Updating Core **
+2020-04-27 20:42:21,947 INFO ** Updating Reporting **
+2020-04-27 20:42:21,987 INFO ------ Branch Checkout Started >> CreditProcessing_15.00.17
+2020-04-27 20:42:21,988 INFO 
+..Branch already Exists[CreditProcessing_15.00.17]..
+2020-04-27 20:42:21,988 INFO ..Cleanup started..
+2020-04-27 20:42:21,989 INFO Cleanup RT_ERROR >>> 'D:\SVN_Checkout\Applications\CoreBankCard\CreditProcessing\Branch_New\CreditProcessing_15.00.17' is not a working copy directory
+
+2020-04-27 20:42:21,990 INFO ** Updating Core **
+2020-04-27 20:42:22,029 INFO ** Updating Reporting **
+2020-04-27 20:42:22,067 INFO ------ Branch Checkout Started >> Plat_15.00.17.01.01_HotPatch
+2020-04-27 20:42:22,068 INFO 
+..Branch already Exists[Plat_15.00.17.01.01_HotPatch]..
+2020-04-27 20:42:22,068 INFO ..Cleanup started..
+2020-04-27 20:42:22,613 INFO ** Updating Core **
+2020-04-27 20:42:22,652 INFO ** Updating Reporting **
+2020-04-27 20:42:22,690 INFO ------ Branch Checkout Started >> Plat_15.00.18
+2020-04-27 20:42:22,690 INFO 
+..Branch already Exists[Plat_15.00.18]..
+2020-04-27 20:42:22,691 INFO ..Cleanup started..
+2020-04-27 20:42:22,744 INFO ** Updating Core **
+2020-04-27 20:42:22,779 INFO ** Updating Reporting **
+2020-04-27 20:42:22,816 INFO ------ Branch Checkout Started >> CreditProcessing_15.00.15.04_HotPatch
+2020-04-27 20:42:22,816 INFO 
+..Branch already Exists[CreditProcessing_15.00.15.04_HotPatch]..
+2020-04-27 20:42:22,817 INFO ..Cleanup started..
+2020-04-27 20:42:22,868 INFO ** Updating Core **
+2020-04-27 20:42:22,904 INFO ** Updating Reporting **
+2020-04-27 20:42:22,943 INFO ------ PlatPackage Checkout Started >> Plat_15.00.17.01 - Package
+2020-04-27 20:42:22,943 INFO 
+..Branch already Exists[Plat_15.00.17.01 - Package]..
+2020-04-27 20:42:22,944 INFO ..Cleanup started..
+2020-04-27 20:42:23,002 INFO ** Updating Core **
+2020-04-27 20:42:23,088 INFO ** Updating Reporting **
+2020-04-27 20:42:23,170 INFO ------ CreditPackage Checkout Started >> CP_15.00.15.04_HP - Package
+2020-04-27 20:42:23,170 INFO 
+..Branch already Exists[CP_15.00.15.04_HP - Package]..
+2020-04-27 20:42:23,171 INFO ..Cleanup started..
+2020-04-27 20:42:23,173 INFO Cleanup RT_ERROR >>> 'D:\SVN_Checkout\Applications\CreditProcessingReleasePackage\CP_15.00.15.04_HP - Package' is not a working copy directory
+
+2020-04-27 20:42:23,173 INFO ** Updating Core **
+2020-04-27 20:42:23,257 INFO ** Updating Reporting **
+2020-04-27 20:42:26,523 INFO 
+** ALERT SENT SUCCESSFULLY **
