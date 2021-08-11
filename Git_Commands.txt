@@ -1,0 +1,21 @@
+Git Commands
+================
+To set git local repo follow the below steps 
+-----------------------------------------------
+1. Download Git on Pc and Open git bash command line window
+2. Write the below commands sequentiallty to connect to your respective git repository on GitHub 
+	>>> git config --global user.name "<username>"
+	>>> git config --global user.email "<Git registerd email id>"
+
+3. Now clone your created repo to your local system , run below command :
+	>>> git clone <repo link> "< Local repo path >"    
+	>>> git clone --branch Projects https://github.com/ankit-kmr/Python-point.git "C:\Users\Ankit\Desktop\Git Checkouts\Projects"  // To clone branch              
+
+4. Now can add uploading files to the clone dir.
+
+5. To check status of files at local repository and add , commit and push code from local to global repo use below commands:
+	>>> cd "< Local repo path >"
+	>>> git status                                           // this gives status of files in the dir
+	>>> git add . / git add < file or foldername to add > 
+	>>> git commit -m "< commit msg >"
+	>>> git push origin <Git_Branch_Name>
