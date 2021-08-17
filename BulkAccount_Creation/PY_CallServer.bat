@@ -1,0 +1,2 @@
+python.exe "D:\SVN_Checkout\Applications\CoreBankCard\CreditProcessing\Trunk\Python_Utilities\Utilites_DayToDay_Task\BulkAccount_Creation\PY_Bulkcreation.py"
+Pause
