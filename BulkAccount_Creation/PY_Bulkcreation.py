@@ -9,7 +9,7 @@ app.config['JSON_SORT_KEYS'] = False
 
 resBody ={}
 
-ApiUrl = 'http://WEB15/AnkitK_APIHandlers/ankitkjsonCoreIssueFinalAccountCreation.aspx'
+ApiUrl = '<Account creation API url>'
 
 def fn_AccountCreationReq(UsrID ,Pass ,ProductID ,storeName ,Fname ,Lname ,MailID ,SSN ,BTable ,Bcycle ,Source):
     global vrTotalAcctCreated
