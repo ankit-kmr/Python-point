@@ -15,10 +15,10 @@ def fn_getFilesDetails( Remote_path ):
         config = configparser.ConfigParser()
         config.read(config_PATH)
 
-        HostIP = config['WindowHost']['HostIP']
-        UserName = config['WindowHost']['UserName']
-        Password = config['WindowHost']['Password']
-        Port = config['WindowHost']['Port']
+        HostIP = config['OpenSSH']['HostIP']
+        UserName = config['OpenSSH']['UserName']
+        Password = config['OpenSSH']['Password']
+        Port = config['OpenSSH']['Port']
         
         try:
             ssh_conn = fn_connectHOST()
