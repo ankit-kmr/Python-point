@@ -22,11 +22,12 @@ WinRM Plugins for remote connect
 >> winrm enumerate winrm/config/Listener
 
 
-{ On client server }
++++ { On client server } +++ 
 
 >> Get-NetConnectionProfile
 
-Network should be private for WinRM to work
+Network should be private for WinRM to work (private networks, the default Windows Firewall rule for PowerShell Remoting accepts all connections. 
+On public networks, the default Windows Firewall rule allows PowerShell Remoting connections only from within the same subnet.)
 
 >> Set-NetConnectionProfile -NetworkCategory Private
 
@@ -46,17 +47,18 @@ E1E4314D304C5A445CA949410497023A6857DB2D  CN=DESKTOP-CEPCEIS
 >> winrm create winrm/config/Listener?Address=*+Transport=HTTPS '@{Hostname="DESKTOP-CEPCEIS"; CertificateThumbprint="E1E4314D304C5A445CA949410497023A6857DB2D"}'
 
 Adding firewall exception (inbound rule) port 5986 for https
-netsh advfirewall firewall add rule name="Windows Remote Management (HTTPS-In)" dir=in action=allow protocol=TCP localport=5986
+>> netsh advfirewall firewall add rule name="Windows Remote Management (HTTPS-In)" dir=in action=allow protocol=TCP localport=5986
 
 To allow unencrypted communication
 >> Set-Item -Path "WSMan:\localhost\Service\AllowUnencrypted" -Value $true
 
-NOTE : once winRM is configured can change back the Network to Public as before
+NOTE : intital authnticatio (Kerberos and NTLM) -- When a client connects to a domain server using its computer name, the default authentication protocol is Kerberos. 
+When a client connects to a domain server using its IP address, or connects to a workgroup server, 
+Kerberos authentication is not possible. In that case, PowerShell Remoting relies on the NTLM authentication protocol. 
 
-{ On the Host server }
++++ { On the Host server } +++ 
 
 Network should be private to configure winRm services
 >> Set-NetConnectionProfile -NetworkCategory Private
 >> winrm set winrm/config/service @{AllowUnencrypted="true"}
 
-NOTE : once winRM is configured can change back the Network to Public as before
