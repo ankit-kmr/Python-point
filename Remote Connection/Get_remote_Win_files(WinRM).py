@@ -22,7 +22,8 @@ if __name__ == '__main__':
         # C:\Users\Ankit-PC\Desktop\SampleFiles\RemoteDir\Configuration.conf
         
         cmd = ' powershell.exe Get-Content "{0}"'.format(Remote_Dir)  # To read a file content
-        print("<< Command executing >> ",cmd)
+        cmd = ' powershell.exe Get-NetConnectionProfile'
+        print("Command executing : ",cmd)
         
         ps_conn = Protocol(endpoint = url,transport = "ntlm",username = UserName,password= Password,server_cert_validation='ignore')
         shell_id = ps_conn.open_shell()
