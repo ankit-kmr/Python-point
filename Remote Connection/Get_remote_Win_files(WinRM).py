@@ -1,8 +1,6 @@
 import os,sys,configparser
 from winrm.protocol import Protocol
 
-import winrm
-
 if __name__ == '__main__':
     try:
         config_PATH = os.path.join(os.path.dirname(__file__),'Setup.conf')
@@ -21,6 +19,7 @@ if __name__ == '__main__':
         Remote_Dir = input('Enter Remote Directory Path: ')
         
         #cmd = ' powershell.exe dir '+ Remote_Dir
+        # C:\Users\Ankit-PC\Desktop\SampleFiles\RemoteDir\Configuration.conf
         
         cmd = ' powershell.exe Get-Content "{0}"'.format(Remote_Dir)  # To read a file content
         print("<< Command executing >> ",cmd)
@@ -32,7 +31,7 @@ if __name__ == '__main__':
         ps_conn.cleanup_command(shell_id, cmd_retrnID)
         ps_conn.close_shell(shell_id)
         
-        print(status_code)
+        
         if status_code == 0:
             print('Operation successfull !!')
             print(std_out.decode('UTF-8'))
