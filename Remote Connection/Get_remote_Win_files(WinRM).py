@@ -32,9 +32,12 @@ if __name__ == '__main__':
         ps_conn.cleanup_command(shell_id, cmd_retrnID)
         ps_conn.close_shell(shell_id)
         
-        print(status_code.decode('UTF-8'))
-        print(std_out.decode('UTF-8'))
-        print(std_err.decode('UTF-8'))
+        print(status_code)
+        if status_code == 0:
+            print('Operation successfull !!')
+            print(std_out.decode('UTF-8'))
+        else:
+            print(std_err.decode('UTF-8'))
     
     except Exception as e:
         print('Exception >>>',str(e))

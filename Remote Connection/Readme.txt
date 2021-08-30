@@ -13,6 +13,7 @@ OpenSSH
 
 WinRM Plugins for remote connect
 ===========================
++++ { On client server } +++ 
 
 * POWERSHELL version should be > 3.0
 >> Get-Host | Select-Object Version .
@@ -21,8 +22,6 @@ WinRM Plugins for remote connect
 * To veiw current winRM Listener (WinRM services listens for requests on one or more ports. Each of these ports must have a listener created and configured.)
 >> winrm enumerate winrm/config/Listener
 
-
-+++ { On client server } +++ 
 
 >> Get-NetConnectionProfile
 
