@@ -12,7 +12,7 @@ if __name__ == '__main__':
         Password = config['PyWinRM']['Password']
         Port = config['PyWinRM']['Port']
         
-        url = "%s://%s:%s/wsman" % ('https', HostIP, 5986)
+        url = "%s://%s:%s/wsman" % ('https', HostIP, Port)
         print('Endpoint == ',url)
         
         
@@ -21,8 +21,8 @@ if __name__ == '__main__':
         #cmd = ' powershell.exe dir '+ Remote_Dir
         # C:\Users\Ankit-PC\Desktop\SampleFiles\RemoteDir\Configuration.conf
         
-        cmd = ' powershell.exe Get-Content "{0}"'.format(Remote_Dir)  # To read a file content
-        cmd = ' powershell.exe Get-NetConnectionProfile'
+        cmd = ' powershell.exe Get-Content "\'{0}\'"'.format(Remote_Dir)  # To read a file content
+        
         print("Command executing : ",cmd)
         
         ps_conn = Protocol(endpoint = url,transport = "ntlm",username = UserName,password= Password,server_cert_validation='ignore')
