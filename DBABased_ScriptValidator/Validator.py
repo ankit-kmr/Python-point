@@ -764,7 +764,7 @@ def fn_ReportingIndexCheck (packageID ,Scriptloc ,ErrCode ,files ) :
 # ------------------------------------------------------------------------------------------------------------
 def fn_Mailsend (mailsubj , SendTO , CC , MailData,client) :
 
-    SERVER = "corecard-com.mail.protection.outlook.com"
+    SERVER = "outlook.com"
     
     if client =='Cr':
         FROM = 'controlteamCr@mai.cm'
