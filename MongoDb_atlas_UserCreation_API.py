@@ -5,8 +5,8 @@ from requests.auth import HTTPBasicAuth,HTTPDigestAuth
 try:
     URL = "https://cloud.mongodb.com/api/atlas/v1.0/groups/6118d6fe9b36265361173dae/databaseUsers"
     
-    UserName = 'newTestUser'
-    Password = 'Test123'
+    UserName = 'ak-readOnly'
+    Password = 'Test123!'
     role = 'read'
     DBName = 'myTestDB'
 
