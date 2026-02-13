@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bubu-g ❤️</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            /* Changed to Light Lavender */
+            background-color: #E6E6FA; 
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .bear-icon { font-size: 80px; margin-bottom: 10px; }
+
+        .container {
+            padding: 30px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(180, 180, 230, 0.4);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 { color: #ff4d6d; font-size: 1.8rem; margin-bottom: 25px; }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px; 
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #yesBtn { background-color: #ff4d6d; color: white; z-index: 10; }
+        #noBtn { background-color: #adb5bd; color: white; }
+
+        #message {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #c9184a;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bear-icon">🧸</div>
+
+    <div class="container">
+        <h1 id="question">Will you be my Valentine, Bubu-g? 💕</h1>
+        
+        <div class="buttons" id="btnWrapper">
+            <button id="yesBtn" onclick="handleYes()">Yes</button>
+            <button id="noBtn" onclick="handleNo()">No</button>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+        let noCount = 0;
+        let yesScale = 1;
+        const messages = [
+            "Are you sure, Bubu-g??",
+            "Really sure??",
+            "Think again! 🥺",
+            "Last chance...",
+            "You're breaking my heart! 💔"
+        ];
+
+        function handleNo() {
+            const noBtn = document.getElementById('noBtn');
+            const yesBtn = document.getElementById('yesBtn');
+            const messageDiv = document.getElementById('message');
+
+            noCount++;
+            
+            yesScale += 0.6;
+            yesBtn.style.transform = `scale(${yesScale})`;
+
+            if (noCount <= 5) {
+                messageDiv.innerText = messages[noCount - 1];
+            }
+
+            if (noCount >= 5) {
+                noBtn.style.display = 'none';
+                messageDiv.innerText = "You will be mine now and forever!! 😈❤️";
+                document.getElementById('question').innerText = "Decision made! 🥰";
+            }
+        }
+
+        function handleYes() {
+            document.body.innerHTML = `
+                <div class="bear-icon">🎉🧸🌸💕</div>
+                <div class="container">
+                    <h1 style="color: #ff4d6d;">Yay! 💕 You made me so happy 😊</h1>
+                    <p style="font-size: 1.2rem; color: #555;">I knew you'd make the right choice, Bubu-g!😁</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
